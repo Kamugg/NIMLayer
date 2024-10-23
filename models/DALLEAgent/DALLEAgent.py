@@ -204,11 +204,3 @@ class DALLEAgent(object):
             return urls
         else:
             return self.__fetch_images(response.data)
-
-
-
-c = DALLEAgent(key='key')
-r = c.generate_from_prompt('a beautiful banana', model='dall-e-3', n=1, size='1024x1024')
-for i in r:
-    i.show()
-print(r)
